@@ -1,0 +1,23 @@
+import java.lang.*;
+import java.util.*;
+public class Digits
+{
+    public static void main(String args[])
+    {
+        int num;
+        Scanner sc=new Scanner(System.in);
+        num=sc.nextInt();
+        int odd=0,even=0;
+        while(num!=0)
+        {
+            int rem=num%10;
+            if(rem%2==1)
+                odd++;
+            else
+                even++;
+            num/=10;
+        }
+        System.out.println("odd digits="+odd);
+        System.out.println("even digits="+even);
+    }
+}
