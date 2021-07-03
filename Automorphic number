@@ -1,0 +1,20 @@
+import java.util.*;
+public class Automorphic
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n,result;
+        n=sc.nextInt();
+        result=n*n;
+        if(result%100==n)
+        {
+            System.out.print("Automorphic as "+n+" * "+n+" = "+result);
+        }
+        else
+        {
+            System.out.print("Not Automorphic");
+        }
+        
+    }
+}
