@@ -1,0 +1,38 @@
+import java.util.*;
+public class Primecount
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        int i,j,p,count=0;
+        System.out.print("Enter array size: ");
+        int n=sc.nextInt();
+        System.out.print("Enter array elements: ");
+        int a[]=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            j=2;
+            p=1;
+            while(j<a[i])
+            {
+                if(a[i]%j==0)
+                {
+                    p=0;
+                    break;
+                }
+                j++;
+            }
+            if(p==1)
+            {
+                count++;
+            }
+            
+        }
+        System.out.print("Prime count is:"+count);
+        
+    }
+}
