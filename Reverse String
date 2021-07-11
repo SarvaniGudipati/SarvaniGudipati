@@ -1,0 +1,23 @@
+import java.util.*;
+public class Reversestring
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter a String:");
+        String str= sc.nextLine();
+        String words[]=str.split(" ");
+        String rev="";
+        for(int i=0;i<words.length;i++)
+        {
+            String word=words[i];
+            String rw="";
+            for(int j=word.length()-1;j>=0;j--)
+            {
+                rw=rw+word.charAt(j);
+            }
+            rev=rev+rw+" ";
+        }
+        System.out.print("Reverse String is:"+rev);
+    }
+}
