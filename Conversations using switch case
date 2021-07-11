@@ -1,0 +1,26 @@
+import java.util.*;
+public class Conversions
+{
+    public static void main(String args[])
+    {
+        int n;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter ur choice:");
+        System.out.print("Enter decimal value:");
+        int n=sc.nextInt();
+        String h=Integer.toHexString(n);
+        String o=Integer.toOctalString(n);
+        String b=Integer.toBinaryString(n);
+        switch(n)
+        {
+            case 1: System.out.print("Binary:"+b);
+            break;
+            case 2: System.out.print("Octal:"+o);
+            break;
+            case 3: System.out.print("Hexa:"+h);
+            break;
+            default:System.out.print("Invalid choice");
+            break;
+        }
+    }
+}
