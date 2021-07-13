@@ -1,0 +1,19 @@
+import java.util.*;
+public class Firstlettercapital
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        String str;
+        str=sc.nextLine();
+        String words[]=str.split("");
+        String capital="";
+        for(String word:words)
+        {
+            String firstLetter=word.substring(0,1);
+            String remainingLetters=word.substring(1);
+            capital+=firstLetter.toUpperCase()+remainingLetters+" ";
+        }
+        System.out.print(capital); 
+    }
+}
