@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Insert
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Enter First String");
+        Scanner scan = new Scanner (System.in);
+        String str = scan.next();
+        System.out.println("Enter Second String");
+        Scanner scan2 = new Scanner (System.in);
+        String str1 = scan2.next();
+        int i = str.length();
+        int j = i/2;
+
+        if (i % 2 == 0)                    //Condition For Even
+        {
+            System.out.println(str.substring(0,j) + str1 + str.substring(j-1,(str.length() - 1)));
+        }
+        else 
+        {
+            System.out.println(str.substring(0,j) + str1 + str.substring(j,(str.length() - 0)));
+        }
+    }
+}
