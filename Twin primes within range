@@ -1,0 +1,34 @@
+import java.io.*;
+class TwinPrimes
+{        
+    public static boolean isPrime(int n) 
+    {
+        int count=0;
+        for(int i=1; i<=n; i++)
+        {
+            if(n%i == 0)
+                count++;
+        }
+            if(count == 2)
+                return true;
+            else
+                return false;
+        }
+  
+        public static void main(String args[])
+        {
+            TwinPrimes T= new TwinPrimes();
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter the range :");
+            int a;
+            a=sc.nextInt();
+ 
+            for(int i=0; i<=(a-2); i++)
+            {
+                if(T.isPrime(i) == true && T.isPrime(i+2) == true)
+                {
+                    System.out.print("("+i+","+(i+2)+") ");
+                }
+            }
+        }                 
+}
