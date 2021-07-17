@@ -1,0 +1,30 @@
+import java.util.*;
+class framework
+{
+    public static void main(String args[])
+    {
+        Scanner sc= new Scanner(System.in);
+        int n;
+        System.out.print("Enter array size:");
+        ArrayList<Integer>x=new ArrayList<Integer>();
+        n=sc.nextInt();
+        System.out.print("Enter array elements:");
+        for(int i=0;i<n;i++)
+        {
+            x.add(sc.nextInt());
+        }
+        System.out.print("Enter value to search:");
+        int key=sc.nextInt();
+        if(x.contains(key))
+        {
+            int x1=x.indexOf(key);
+            //System.out.print(x1);
+            x.set(x1,99);
+            System.out.println(x);
+        }
+        else
+        {
+            System.out.println("False");
+        }
+    }
+}
